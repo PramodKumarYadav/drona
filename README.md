@@ -2,9 +2,9 @@
 A test repo to play around with automation
 
 # collaborators
-Rashmi PB
-Pramod
-Mahesh 
+- Rashmi PB
+- Pramod
+- Mahesh 
 
 # Test workflow
 - [Test workflow is described here](./test-workflow.drawio)
