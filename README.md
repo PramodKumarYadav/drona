@@ -7,6 +7,6 @@ Pramod
 Mahesh 
 
 # Test workflow
-[Test workflow is described here](./GenericTestFlow.drawio)
-[A generic workflow to work with git is explained here](./"git workflow.drawio")
+[Test workflow is described here](./test-workflow.drawio)
+[A generic workflow to work with git is explained here](./git-workflow.drawio)
 
