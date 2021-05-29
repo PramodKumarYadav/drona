@@ -112,9 +112,22 @@ in multiple test environments (local, cloud, develop, master).
 - 07. Now with a fair understanding of how different parts of end to end automation looks like, lets start with a plain vanilla project
 	and build our first "test" based on one of the examples present online. We are picking up frontend automation example here but the end to end process
 	  is exactly the same if you switch this framework from frontend to say rest api or any other backend framework. 
+
+- xx. When trying to run in docker container, there are few troubleshootings that I had to do to make tests run in container. These are:
+	- The jdk version mentioned in the dockerfile and the one in POM file should match. 
+	if not,you will see funny errors. To fix this, when I tried with jdk8 in both places, 
+	  I still had errors. Those I guess were due to pom using dependencies higher than jdk8.
+	  - jdk 10 doesnt exist in docker image. So i put in pom jdk 11 and also in dockerfile,
+		FROM maven:3.8.1-jdk-11 . This gave one final error about crashing vm.
+		- I could resolve this by running tests in headless mode in container. 
+	 - so when you start covering this area, these are some points to remember. 
+	- also note that now you need jdk 11 downloaded for your test project. else the project
+	will not run in local exeuction mode (since you only have jdk10 installed)
+	  - also the test ran fine with firefox but not chrome. so in container, this is a issue. 
+	either download firefox or fix the issues. 
 	  
 ## to be continued..
-	
+
 	
 # Reference
 - [convert-a-regular-project-into-a-maven-project](https://www.jetbrains.com/help/idea/convert-a-regular-project-into-a-maven-project.html#add_maven_support)
