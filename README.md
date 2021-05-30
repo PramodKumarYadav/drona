@@ -25,31 +25,14 @@ Powershell
 Other tools
  - As the need arises. 
  
-Files that matters:
- - Readme files
-	- to explain what your framework does and how. It helps new joines onboard and can define
-	rules of the game for teams. 
- - editor-config file
-	- so that when you start colloborating with others you use the same styling rules, so 
-	that git hub only show application changes and changes and not styling changes as changes
-	which will happen if you use different editor configuation (say in IntelliJ)
- - gitignore file
-	- because you dont want to version control everything. There are things that you want to avoid
-	from version control such as say local test run results, compiled files etc all. 
- - Docker files (compose and dockerfiles)
-	- so that your framework can run from any machine anywhere, without any issues. 
- - pom file 
-	- to have a automated build system for your framework. 
- - app-config files. 
-	- to have configurabilty in your test framework to make it run the same 
-	in multiple test environments (local, cloud, develop, master). 
 
 
 
-	### Framework Requirements:
+
+### Framework Requirements:
 
 
-	This is a list of all items that we need to consider in order to create a new test automation framework.
+This is a list of all items that we need to consider in order to create a new test automation framework.
 
 
 1. Application under test: Select an application that we are going to test on. (https://www.saucedemo.com/)
