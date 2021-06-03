@@ -9,10 +9,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-class LoginTest {
+class LockedoutUserLoginTest {
 
     @Test
     void test() {
@@ -23,21 +22,17 @@ class LoginTest {
         driver.get(AppURL);
 
         WebElement username = driver.findElement(By.id("user-name"));
-        username.sendKeys("standard_user");
+        username.sendKeys("locked_out_user");
         WebElement password = driver.findElement(By.id("password"));
         password.sendKeys("secret_sauce");
         WebElement submitButton = driver.findElement(By.id("login-button"));
         submitButton.click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        WebElement titleElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class = 'title']")));
-        assertEquals(titleElement.getAttribute(("innerHTML")), "Products");
+        Boolean titleElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class = 'error-button']"))).isDisplayed();
+        assertEquals(titleElement, true);
 
         driver.quit();
     }
 
-    @Test
-    void thisIsAOneLinerTest() {
-        assertTrue(true);
-    }
 }
