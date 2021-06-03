@@ -1,4 +1,4 @@
-# drona
+# Drona
 
 Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
 - Need based learning (so learn a concept when the need arise for it).
@@ -6,7 +6,7 @@ Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
 
 As a result of the philosophy first we will come up with some ugly solutions and then will improvise from there to make them better. 
 
-#Warning
+## Warning
 As a result of above approach, expect to see a lot of bad intermittent code examples here. This repo thus, is not meant to be used as a reference since it is meant to start with some bad practices and from them move to better practices.
 
 Idea is going from a bad solution to a better one will help remember why certain solutions are better than the bad ones. 
