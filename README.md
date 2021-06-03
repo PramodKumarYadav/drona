@@ -73,13 +73,13 @@ This is a list of all items that we need to consider in order to create a new te
 Here is a list of objectivess that we expect our test framework to fulfill. As and when we prohress with the creation
 and update of frameowrk, we will check these items from below.
 
-- [] Tests should be atomic and not dependent on other tests.
-- [] To increase speed of execution.
-- [] To allow parrallel execution of tests.
-- [] To improve test coverage (failing end to end tests, results in non-tested code).
-- [] Test design should be clean and readable.
-- [] To improve readability and maintenance.
-- [] Should eliminate duplication.
+-[] Tests should be atomic and not dependent on other tests.
+-[] To increase speed of execution.
+-[X] To allow parallel execution of tests.
+-[] To improve test coverage (failing end to end tests, results in non-tested code).
+-[] Test design should be clean and readable.
+-[] To improve readability and maintenance.
+-[] Should eliminate duplication.
 
         - by seperating intent from implementation (intent in controller/test classes vs implementation in tools/pageobject classes)
         - by using page object model.
@@ -246,3 +246,4 @@ and update of frameowrk, we will check these items from below.
 
 - [convert-a-regular-project-into-a-maven-project](https://www.jetbrains.com/help/idea/convert-a-regular-project-into-a-maven-project.html#add_maven_support)
 - [link issue to a pull request](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-issues/linking-a-pull-request-to-an-issue)
+- [how to run tests in parallel](https://junit.org/junit5/docs/snapshot/user-guide/index.html)
