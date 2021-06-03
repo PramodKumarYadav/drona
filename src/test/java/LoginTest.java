@@ -12,9 +12,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+// Goal is to mention everything that is wrong with below tests (which are many)
+// and to then move towards a more production grade way of writing tests.
 class LoginTest {
-
     @ParameterizedTest
     @CsvSource({"standard_user,secret_sauce"
             , "problem_user,secret_sauce"
@@ -56,7 +56,7 @@ class LoginTest {
         submitButton.click();
 
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        
+
         WebElement error = driver.findElement(By.xpath("//h3[@data-test='error']"));
         System.out.println(error.getText());
 

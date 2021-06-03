@@ -1,6 +1,12 @@
 # drona
 
-A test repo to play around with automation
+Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
+
+- Need based learning (so learn a concept when the need arise for it).
+- And the philosophy to, "first make it work and then make it better"
+
+As a result of the philosophy first we will solve a problem in most probably a ugly way and then by the pains caused
+from that solution improvise and make it better.
 
 # collaborators
 
