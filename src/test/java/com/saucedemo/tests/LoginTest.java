@@ -22,8 +22,6 @@ public class LoginTest {
     public void setup() {
         WebDriverManager.getInstance(CHROME).setup();
         driver = new ChromeDriver();
-        String appURL = "https://www.saucedemo.com/";
-        driver.get(appURL);
         Login = new Login(driver);
     }
 
