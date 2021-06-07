@@ -13,9 +13,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoginTest {
+public class UglyLoginTest {
 
-    WebDriver driver;
+    private WebDriver driver;
     com.saucedemo.pages.Login login;
 
     @BeforeEach
@@ -38,18 +38,18 @@ public class LoginTest {
 
     public void assertThatAValidUserCanLogin(String username, String password) {
         login.login(username, password);
-        assertEquals(login.getLoginTitle(), "Products");
+        assertEquals("Products", login.getTitle());
     }
 
     @Test
     public void assertThatALockedOutUserCanNotLogIn() {
         login.login("locked_out_user", "secret_sauce");
-        assertEquals(login.getLoginLockOutError(), "Epic sadface: Sorry, this user has been locked out.");
+        assertEquals("Epic sadface: Sorry, this user has been locked out.", login.getLoginLockOutError());
     }
 
     @Test
     public void assertThatAPerformanceIssueUserCanLogInButAfterSomeDelays() {
         login.login("performance_glitch_user", "secret_sauce");
-        assertEquals(login.getLoginTitle(), "Products");
+        assertEquals("Products", login.getTitle());
     }
 }
