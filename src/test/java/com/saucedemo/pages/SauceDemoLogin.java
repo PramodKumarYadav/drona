@@ -25,6 +25,7 @@ public class SauceDemoLogin {
     }
 
     public void enterUsername(String UserValue) {
+
         Username.sendKeys(UserValue);
     }
 
@@ -39,10 +40,12 @@ public class SauceDemoLogin {
     }
 
     public String getLoginTitle() {
+
         return title.getAttribute("innerHTML");
     }
 
     public String getLoginLockOutError() {
+
         return LockOutError.getText();
     }
 
