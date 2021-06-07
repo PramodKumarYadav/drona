@@ -50,4 +50,12 @@ public class LoginTestWithPageFactory {
         String loginError = Login.getLoginLockOutError();
         assertEquals(loginError, "Epic sadface: Sorry, this user has been locked out.");
     }
+
+    @Test
+    public void assertThatAPerformanceIssueUserCanLogInButAfterSomeDelays() {
+        Login = new SauceDemoLogin(driver);
+        Login.loginToSauceDemo("performance_glitch_user", "secret_sauce");
+        String pageTitle = Login.getLoginTitle();
+        assertEquals(pageTitle, "Products");
+    }
 }
