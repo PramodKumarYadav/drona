@@ -16,13 +16,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LoginTest {
 
     WebDriver driver;
-    com.saucedemo.pages.Login Login;
+    com.saucedemo.pages.Login login;
 
     @BeforeEach
     public void setup() {
         WebDriverManager.getInstance(CHROME).setup();
+
         driver = new ChromeDriver();
-        Login = new Login(driver);
+        login = new Login(driver);
     }
 
     @AfterEach
@@ -36,19 +37,19 @@ public class LoginTest {
     })
 
     public void assertThatAValidUserCanLogin(String username, String password) {
-        Login.login(username, password);
-        assertEquals(Login.getLoginTitle(), "Products");
+        login.login(username, password);
+        assertEquals(login.getLoginTitle(), "Products");
     }
 
     @Test
     public void assertThatALockedOutUserCanNotLogIn() {
-        Login.login("locked_out_user", "secret_sauce");
-        assertEquals(Login.getLoginLockOutError(), "Epic sadface: Sorry, this user has been locked out.");
+        login.login("locked_out_user", "secret_sauce");
+        assertEquals(login.getLoginLockOutError(), "Epic sadface: Sorry, this user has been locked out.");
     }
 
     @Test
     public void assertThatAPerformanceIssueUserCanLogInButAfterSomeDelays() {
-        Login.login("performance_glitch_user", "secret_sauce");
-        assertEquals(Login.getLoginTitle(), "Products");
+        login.login("performance_glitch_user", "secret_sauce");
+        assertEquals(login.getLoginTitle(), "Products");
     }
 }
