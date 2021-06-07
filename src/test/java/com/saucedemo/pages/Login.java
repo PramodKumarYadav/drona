@@ -6,37 +6,37 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class SauceDemoLogin {
+public class Login {
     WebDriver driver;
     @FindBy(name = "user-name")
-    WebElement Username;
+    WebElement username;
     @FindBy(name = "password")
-    WebElement Password;
+    WebElement password;
     @FindBy(name = "login-button")
-    WebElement Login;
+    WebElement login;
     @FindBy(className = "title")
     WebElement title;
     @FindBy(xpath = "//h3[@data-test='error']")
-    WebElement LockOutError;
+    WebElement lockOutError;
 
-    public SauceDemoLogin(WebDriver driver) {
+    public Login(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void enterUsername(String UserValue) {
+    public void setUsername(String user) {
 
-        Username.sendKeys(UserValue);
+        username.sendKeys(user);
     }
 
-    public void enterPassword(String PasswordValue) {
+    public void setPassword(String password) {
 
-        Password.sendKeys(PasswordValue);
+        this.password.sendKeys(password);
     }
 
     public void clickLogin() {
 
-        Login.click();
+        login.click();
     }
 
     public String getLoginTitle() {
@@ -46,12 +46,12 @@ public class SauceDemoLogin {
 
     public String getLoginLockOutError() {
 
-        return LockOutError.getText();
+        return lockOutError.getText();
     }
 
-    public void loginToSauceDemo(String UserValue, String PasswordValue) {
-        this.enterUsername(UserValue);
-        this.enterPassword(PasswordValue);
+    public void login(String UserValue, String PasswordValue) {
+        this.setUsername(UserValue);
+        this.setPassword(PasswordValue);
         this.clickLogin();
     }
 
