@@ -24,6 +24,7 @@ public class LoginTest {
         driver = new ChromeDriver();
         String appURL = "https://www.saucedemo.com/";
         driver.get(appURL);
+        Login = new Login(driver);
     }
 
     @AfterEach
@@ -37,21 +38,18 @@ public class LoginTest {
     })
 
     public void assertThatAValidUserCanLogin(String username, String password) {
-        Login = new Login(driver);
         Login.login(username, password);
         assertEquals(Login.getLoginTitle(), "Products");
     }
 
     @Test
     public void assertThatALockedOutUserCanNotLogIn() {
-        Login = new Login(driver);
         Login.login("locked_out_user", "secret_sauce");
         assertEquals(Login.getLoginLockOutError(), "Epic sadface: Sorry, this user has been locked out.");
     }
 
     @Test
     public void assertThatAPerformanceIssueUserCanLogInButAfterSomeDelays() {
-        Login = new Login(driver);
         Login.login("performance_glitch_user", "secret_sauce");
         assertEquals(Login.getLoginTitle(), "Products");
     }
