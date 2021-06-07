@@ -39,23 +39,20 @@ public class LoginTest {
     public void assertThatAValidUserCanLogin(String username, String password) {
         Login = new Login(driver);
         Login.login(username, password);
-        String pageTitle = Login.getLoginTitle();
-        assertEquals(pageTitle, "Products");
+        assertEquals(Login.getLoginTitle(), "Products");
     }
 
     @Test
     public void assertThatALockedOutUserCanNotLogIn() {
         Login = new Login(driver);
         Login.login("locked_out_user", "secret_sauce");
-        String loginError = Login.getLoginLockOutError();
-        assertEquals(loginError, "Epic sadface: Sorry, this user has been locked out.");
+        assertEquals(Login.getLoginLockOutError(), "Epic sadface: Sorry, this user has been locked out.");
     }
 
     @Test
     public void assertThatAPerformanceIssueUserCanLogInButAfterSomeDelays() {
         Login = new Login(driver);
         Login.login("performance_glitch_user", "secret_sauce");
-        String pageTitle = Login.getLoginTitle();
-        assertEquals(pageTitle, "Products");
+        assertEquals(Login.getLoginTitle(), "Products");
     }
 }
