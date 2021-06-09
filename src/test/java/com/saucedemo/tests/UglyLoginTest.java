@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UglyLoginTest {
     private WebDriver driver;
-    com.saucedemo.pages.Login login;
+    Login login;
 
     @BeforeEach
     public void setup() {
