@@ -49,12 +49,10 @@ public class Login {
     }
 
     public void login(String user, String password) {
-
         driver.get("https://www.saucedemo.com/");
         setUsername(user);
         setPassword(password);
         clickLogin();
     }
-
 }
 
