@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Login {
     private WebDriver driver;
-    private String loginUrl = "https://www.saucedemo.com/";
+    private static final String LOGIN_URL = "https://www.saucedemo.com/";
 
     @FindBy(name = "user-name")
     private WebElement username;
@@ -50,7 +50,7 @@ public class Login {
     }
 
     public void login(String username, String password) {
-        driver.get(loginUrl);
+        driver.get(LOGIN_URL);
         setUsername(username);
         setPassword(password);
         clickLogin();
