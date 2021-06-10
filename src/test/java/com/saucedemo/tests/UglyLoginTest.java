@@ -14,9 +14,8 @@ import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UglyLoginTest {
-
     private WebDriver driver;
-    com.saucedemo.pages.Login login;
+    Login login;
 
     @BeforeEach
     public void setup() {
@@ -35,7 +34,6 @@ public class UglyLoginTest {
     @CsvSource({"standard_user,secret_sauce",
             "problem_user,secret_sauce"
     })
-
     public void assertThatAValidUserCanLogin(String username, String password) {
         login.login(username, password);
         assertEquals("Products", login.getTitle());
