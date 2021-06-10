@@ -14,17 +14,18 @@ public class UglyLoginTest {
     private Login login;
     private DriverForBrowser driverForBrowser;
     private String browser = "chrome";
+    private WebDriver driver;
 
     @BeforeEach
     public void setup() {
         driverForBrowser = new DriverForBrowser(browser);
-        WebDriver driver = driverForBrowser.getDriver();
+        driver = driverForBrowser.getDriver();
         login = new Login(driver);
     }
 
     @AfterEach
     public void teardown() {
-        driverForBrowser.getDriver().quit();
+        driver.quit();
     }
 
     @ParameterizedTest
