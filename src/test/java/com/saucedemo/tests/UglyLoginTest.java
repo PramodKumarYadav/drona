@@ -1,34 +1,30 @@
 package com.saucedemo.tests;
 
+import com.saucedemo.pages.DriverForBrowser;
 import com.saucedemo.pages.Login;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UglyLoginTest {
-
-    private WebDriver driver;
-    com.saucedemo.pages.Login login;
+    private Login login;
+    private DriverForBrowser driverForBrowser;
+    private String browser = "chrome";
 
     @BeforeEach
     public void setup() {
-        WebDriverManager.getInstance(CHROME).setup();
-
-        driver = new ChromeDriver();
+        driverForBrowser = new DriverForBrowser(browser);
+        WebDriver driver = driverForBrowser.getDriver();
         login = new Login(driver);
     }
 
     @AfterEach
     public void teardown() {
-        driver.quit();
+        driverForBrowser.getDriver().quit();
     }
 
     @ParameterizedTest

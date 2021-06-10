@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Login {
-    private WebDriver driver;
+    private final WebDriver driver;
 
     @FindBy(name = "user-name")
     private WebElement username;
@@ -28,8 +28,8 @@ public class Login {
         PageFactory.initElements(driver, this);
     }
 
-    private void setUsername(String user) {
-        username.sendKeys(user);
+    private void setUsername(String username) {
+        this.username.sendKeys(username);
     }
 
     private void setPassword(String password) {
@@ -48,10 +48,10 @@ public class Login {
         return lockOutError.getText();
     }
 
-    public void login(String user, String password) {
+    public void login(String username, String password) {
 
         driver.get("https://www.saucedemo.com/");
-        setUsername(user);
+        setUsername(username);
         setPassword(password);
         clickLogin();
     }
