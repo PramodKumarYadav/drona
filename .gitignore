@@ -24,3 +24,8 @@ hs_err_pid*
 
 # Idea files
 .idea
+target
+bin
+.settings
+.classpath
+.project
