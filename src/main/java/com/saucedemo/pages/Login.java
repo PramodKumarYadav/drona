@@ -6,8 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Login {
-    private WebDriver driver;
+    private final WebDriver driver;
     private static final String LOGIN_URL = "https://www.saucedemo.com/";
+    
 
     @FindBy(name = "user-name")
     private WebElement username;
