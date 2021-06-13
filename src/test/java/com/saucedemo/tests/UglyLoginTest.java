@@ -1,6 +1,6 @@
 package com.saucedemo.tests;
 
-import com.saucedemo.pages.DriverForBrowser;
+import com.saucedemo.pages.DriverFactory;
 import com.saucedemo.pages.Login;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,14 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UglyLoginTest {
     private Login login;
-    private DriverForBrowser driverForBrowser;
-    private String browser = "chrome";
+    private DriverFactory driverFactory;
     private WebDriver driver;
 
     @BeforeEach
     public void setup() {
-        driverForBrowser = new DriverForBrowser(browser);
-        driver = driverForBrowser.getDriver();
+        driverFactory = new DriverFactory();
+        driver = driverFactory.getDriver();
         login = new Login(driver);
     }
 

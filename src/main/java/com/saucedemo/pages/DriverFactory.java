@@ -8,9 +8,11 @@ import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static io.github.bonigarcia.wdm.DriverManagerType.FIREFOX;
 
 
-public class DriverForBrowser {
+public class DriverFactory {
     private final WebDriver driver;
-    public DriverForBrowser(String browser){
+    private String browser = "chrome";
+
+    public DriverFactory(){
         switch (browser){
             case "chrome":
                 WebDriverManager.getInstance(CHROME).setup();
@@ -21,7 +23,6 @@ public class DriverForBrowser {
                 WebDriverManager.getInstance(FIREFOX).setup();
                 driver = new FirefoxDriver();
                 break;
-
                 default:
                     WebDriverManager.getInstance(CHROME).setup();
                     driver = new ChromeDriver();
