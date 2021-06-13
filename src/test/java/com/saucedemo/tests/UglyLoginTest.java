@@ -12,13 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UglyLoginTest {
     private Login login;
-    private DriverFactory driverFactory;
     private WebDriver driver;
 
     @BeforeEach
     public void setup() {
-        driverFactory = new DriverFactory();
-        driver = driverFactory.getDriver();
+
+        driver = DriverFactory.getDriver();
         login = new Login(driver);
     }
 

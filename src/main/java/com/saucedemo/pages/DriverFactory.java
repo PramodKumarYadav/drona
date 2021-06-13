@@ -7,13 +7,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static io.github.bonigarcia.wdm.DriverManagerType.FIREFOX;
 
-
 public class DriverFactory {
-    private final WebDriver driver;
-    private String browser = "chrome";
+    private static WebDriver driver;
+    private static String browser = "chrome";
 
-    public DriverFactory(){
-        switch (browser){
+    public static WebDriver getDriver() {
+        switch (browser) {
             case "chrome":
                 WebDriverManager.getInstance(CHROME).setup();
                 driver = new ChromeDriver();
@@ -23,12 +22,12 @@ public class DriverFactory {
                 WebDriverManager.getInstance(FIREFOX).setup();
                 driver = new FirefoxDriver();
                 break;
-                default:
-                    WebDriverManager.getInstance(CHROME).setup();
-                    driver = new ChromeDriver();
+
+            default:
+                WebDriverManager.getInstance(CHROME).setup();
+                driver = new ChromeDriver();
         }
-    }
-    public WebDriver getDriver(){
         return driver;
     }
 }
+
