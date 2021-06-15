@@ -1,5 +1,7 @@
 package com.saucedemo.pages;
 
+import com.saucedemo.config.Environment;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,8 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Login {
     private final WebDriver driver;
-    private static final String LOGIN_URL = "https://www.saucedemo.com/";
-    
+    private Environment environment;
+
+
 
     @FindBy(name = "user-name")
     private WebElement username;
@@ -51,7 +54,8 @@ public class Login {
     }
 
     public void login(String username, String password) {
-        driver.get(LOGIN_URL);
+        environment = ConfigFactory.create(Environment.class,System.getenv(), System.getProperties());
+        driver.get(environment.url());
         setUsername(username);
         setPassword(password);
         clickLogin();

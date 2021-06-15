@@ -28,8 +28,7 @@ public class UglyLoginTest {
 
     @ParameterizedTest
     @CsvSource({"standard_user,secret_sauce",
-            "problem_user,secret_sauce"
-    })
+                "problem_user,secret_sauce"})
     public void assertThatAValidUserCanLogin(String username, String password) {
         login.login(username, password);
         assertEquals("Products", login.getTitle());
