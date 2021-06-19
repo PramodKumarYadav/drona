@@ -21,5 +21,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
+    - name: Install Google Chrome # Using shell script to install Google Chrome
+      run: |
+       chmod +x ./InstallChrome.sh
+        ./InstallChrome.sh
     - name: Build with Maven
       run: mvn test
