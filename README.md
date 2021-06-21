@@ -1,4 +1,7 @@
 # Drona
+[![](https://img.shields.io/github/issues/PramodKumarYadav/drona)](https://github.com/PramodKumarYadav/drona/issues)
+
+[![](https://img.shields.io/github/workflow/status/PramodKumarYadav/drona/Java%20CI%20with%20Maven/develop)](https://github.com/PramodKumarYadav/drona/actions)
 
 Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
 - Need based learning (so learn a concept when the need arise for it).
