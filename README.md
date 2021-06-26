@@ -1,5 +1,26 @@
 # Drona
 
+### Github Stats
+
+![Your Repository’s Stats](https://github-readme-stats.vercel.app/api?username=PramodKumarYadav&show_icons=true)
+###Most used languages in this repository
+
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=PramodKumarYadav&theme=blue-green)
+
+###Contributor's badge
+<a href = "https://github.com/PramodKumarYadav/Drona/graphs/contributors">
+<img src = "https://contrib.rocks/image?repo = PramodKumarYadav/Drona"/>
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
+
+###Random Joke Generator
+
+![Jokes Card](https://readme-jokes.vercel.app/api)
+
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
+
 Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
 - Need based learning (so learn a concept when the need arise for it).
 - And the philosophy to, "first make it work and then make it better"
