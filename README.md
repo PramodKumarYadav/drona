@@ -18,7 +18,7 @@ Made with [contributors-img](https://contrib.rocks).
 
 ![Jokes Card](https://readme-jokes.vercel.app/api)
 
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![AppVeyor branch](https://img.shields.io/appveyor/build/PramodKumarYadav/drona/develop)
 
 
 Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
