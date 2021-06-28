@@ -1,5 +1,10 @@
 # Drona
 
+[![](https://img.shields.io/github/issues/PramodKumarYadav/drona)](https://github.com/PramodKumarYadav/drona/issues)
+
+
+[![GitHub Workflow Status (develop)](https://img.shields.io/github/workflow/status/pramodkumaryadav/drona/Java%20CI%20with%20Maven/develop)](https://github.com/PramodKumarYadav/drona/actions/workflows/maven.yml)
+
 ### Github Stats
 
 ![Your Repository’s Stats](https://github-readme-stats.vercel.app/api?username=PramodKumarYadav&show_icons=true)
@@ -18,7 +23,6 @@ Made with [contributors-img](https://contrib.rocks).
 
 ![Jokes Card](https://readme-jokes.vercel.app/api)
 
-![AppVeyor branch](https://img.shields.io/appveyor/build/PramodKumarYadav/drona/develop)
 
 
 Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
