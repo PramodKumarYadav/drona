@@ -5,6 +5,8 @@
 
 [![wakatime](https://wakatime.com/badge/github/PramodKumarYadav/drona.svg)](https://wakatime.com/badge/github/PramodKumarYadav/drona)
 
+<figure><embed src="https://wakatime.com/share/@PramodKumarYadav/3628f6fa-09d4-4922-8ebe-d1bf41e42acd.svg"></embed></figure>
+
 Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
 - Need based learning (so learn a concept when the need arise for it).
 - And the philosophy to, "first make it work and then make it better"
