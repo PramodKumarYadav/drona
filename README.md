@@ -1,4 +1,11 @@
 # Drona
+[![](https://img.shields.io/github/issues/PramodKumarYadav/drona)](https://github.com/PramodKumarYadav/drona/issues)
+
+[![GitHub Workflow Status (develop)](https://img.shields.io/github/workflow/status/pramodkumaryadav/drona/Java%20CI%20with%20Maven/develop)](https://github.com/PramodKumarYadav/drona/actions/workflows/maven.yml)
+
+[![wakatime](https://wakatime.com/badge/github/PramodKumarYadav/drona.svg)](https://wakatime.com/badge/github/PramodKumarYadav/drona)
+
+<figure><embed src="https://wakatime.com/share/@PramodKumarYadav/3628f6fa-09d4-4922-8ebe-d1bf41e42acd.svg"></embed></figure>
 
 Goal of this repo is to help Rashmi learn automation by doing it. Approach is:
 - Need based learning (so learn a concept when the need arise for it).
