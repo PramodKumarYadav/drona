@@ -15,7 +15,7 @@
         <maven.surefire.plugin>2.22.2</maven.surefire.plugin>
         <junit.jupiter.version>5.5.1</junit.jupiter.version>
         <selenium.version>3.141.59</selenium.version>
-        <webdrivermanager.version>3.8.1</webdrivermanager.version>
+        <webdrivermanager.version>6.1.0</webdrivermanager.version>
     </properties>
 
     <dependencies>
